@@ -1,5 +1,6 @@
 # Test screenshots
 *.png
+!CEO.png
 
 # Node modules
 node_modules/

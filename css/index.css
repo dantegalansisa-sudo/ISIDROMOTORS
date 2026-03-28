@@ -664,6 +664,172 @@
 }
 
 /* ═══════════════════════════════════════════
+   CEO — REIVY PUJOLS
+═══════════════════════════════════════════ */
+.ceo {
+  padding: 120px 0;
+  background: var(--color-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.ceo::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ceo__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+  display: grid;
+  grid-template-columns: 0.45fr 0.55fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.ceo__image-col {
+  display: flex;
+  justify-content: center;
+}
+
+.ceo__image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.ceo__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  filter: grayscale(15%) contrast(1.05);
+}
+
+.ceo__image-accent {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.ceo__content .section-label {
+  text-align: left;
+}
+
+.ceo__name {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 200;
+  color: #fff;
+  margin-top: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.ceo__name strong {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.ceo__role {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ceo__divider {
+  width: 60px;
+  height: 2px;
+  background: var(--color-accent);
+  margin: 28px 0;
+}
+
+.ceo__quote {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  font-style: italic;
+  font-weight: 300;
+  padding-left: 20px;
+  border-left: 3px solid rgba(201,168,76,0.4);
+  margin: 0 0 28px 0;
+}
+
+.ceo__bio {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.ceo__bio strong {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+}
+
+.ceo__values {
+  display: flex;
+  gap: 24px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.ceo__value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.ceo__value:hover {
+  border-color: var(--color-accent);
+  background: rgba(201,168,76,0.08);
+}
+
+.ceo__value svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
+.ceo__value span {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════
    TESTIMONIALS
 ═══════════════════════════════════════════ */
 .testimonials {
@@ -1013,6 +1179,16 @@
   .cinematic { height: 420px; }
   .cinematic__content { padding: 0 24px; }
 
+  .ceo__inner { grid-template-columns: 1fr; gap: 48px; max-width: 640px; }
+  .ceo__image-frame { max-width: 340px; }
+  .ceo__image-col { order: 0; }
+  .ceo__content .section-label { text-align: center; }
+  .ceo__name { text-align: center; }
+  .ceo__role { text-align: center; }
+  .ceo__divider { margin: 28px auto; }
+  .ceo__values { justify-content: center; }
+  .ceo { padding: 80px 24px; }
+
   .featured,
   .journey,
   .brands,
@@ -1067,6 +1243,9 @@
   .cinematic__title { font-size: 1.6rem; }
   .location__grid { gap: 32px; }
   .location__map { aspect-ratio: 16/9; }
+  .ceo__values { gap: 12px; }
+  .ceo__value { padding: 8px 14px; }
+  .ceo__quote { font-size: 1rem; }
   .testimonials, .faq, .location, .process, .stats { padding-left: 24px; padding-right: 24px; }
 }
 
@@ -1101,5 +1280,10 @@
   .stats__grid { grid-template-columns: 1fr 1fr; }
   .cinematic { height: 440px; }
   .cinematic__content { padding: 0 16px; }
+  .ceo { padding: 64px 16px; }
+  .ceo__image-frame { max-width: 280px; }
+  .ceo__image-accent { bottom: -10px; right: -10px; }
+  .ceo__values { gap: 8px; }
+  .ceo__value { padding: 8px 12px; flex: 1 1 calc(50% - 8px); justify-content: center; }
   .testimonials, .faq, .location, .process, .stats { padding-left: 16px; padding-right: 16px; }
 }
