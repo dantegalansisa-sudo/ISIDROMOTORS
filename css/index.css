@@ -686,7 +686,7 @@
 .ceo__inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--section-padding);
+  padding: 0 48px;
   display: grid;
   grid-template-columns: 0.45fr 0.55fr;
   gap: 80px;
