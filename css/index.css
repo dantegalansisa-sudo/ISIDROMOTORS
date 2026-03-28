@@ -670,7 +670,6 @@
   padding: 120px 0;
   background: var(--color-primary);
   position: relative;
-  overflow: hidden;
 }
 
 .ceo::before {
@@ -697,19 +696,17 @@
 .ceo__image-col {
   display: flex;
   justify-content: center;
+  padding: 0 20px 20px 0;
 }
 
 .ceo__image-frame {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
 }
 
 .ceo__photo {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
   border-radius: 12px;
   display: block;
   position: relative;
@@ -1179,15 +1176,15 @@
   .cinematic { height: 420px; }
   .cinematic__content { padding: 0 24px; }
 
-  .ceo__inner { grid-template-columns: 1fr; gap: 48px; max-width: 640px; }
-  .ceo__image-frame { max-width: 340px; }
-  .ceo__image-col { order: 0; }
+  .ceo { padding: 80px 24px; }
+  .ceo__inner { grid-template-columns: 1fr; gap: 40px; max-width: 540px; }
+  .ceo__image-col { padding: 0 16px 16px 0; }
+  .ceo__image-frame { max-width: 300px; margin: 0 auto; }
   .ceo__content .section-label { text-align: center; }
   .ceo__name { text-align: center; }
   .ceo__role { text-align: center; }
   .ceo__divider { margin: 28px auto; }
   .ceo__values { justify-content: center; }
-  .ceo { padding: 80px 24px; }
 
   .featured,
   .journey,
@@ -1280,10 +1277,14 @@
   .stats__grid { grid-template-columns: 1fr 1fr; }
   .cinematic { height: 440px; }
   .cinematic__content { padding: 0 16px; }
-  .ceo { padding: 64px 16px; }
-  .ceo__image-frame { max-width: 280px; }
-  .ceo__image-accent { bottom: -10px; right: -10px; }
-  .ceo__values { gap: 8px; }
-  .ceo__value { padding: 8px 12px; flex: 1 1 calc(50% - 8px); justify-content: center; }
+  .ceo { padding: 56px 16px; }
+  .ceo__inner { gap: 28px; }
+  .ceo__image-col { padding: 0 14px 14px 0; }
+  .ceo__image-frame { max-width: 240px; }
+  .ceo__image-accent { bottom: -12px; right: -12px; }
+  .ceo__quote { font-size: 0.92rem; padding-left: 16px; line-height: 1.7; }
+  .ceo__bio { font-size: 0.88rem; }
+  .ceo__values { gap: 10px; display: grid; grid-template-columns: 1fr 1fr; }
+  .ceo__value { padding: 10px 14px; justify-content: center; }
   .testimonials, .faq, .location, .process, .stats { padding-left: 16px; padding-right: 16px; }
 }
