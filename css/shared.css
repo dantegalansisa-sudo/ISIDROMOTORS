@@ -691,4 +691,4 @@ footer {
 }
 .inv-badge--new { background: #25D366; color: #fff; }
 .inv-badge--offer { background: var(--color-accent); color: #fff; }
-.inv-badge--used { background: rgba(0,0,0,0.6); color: #fff; backdrop-filter: blur(8px); }
+.inv-badge--used { background: rgba(0,0,0,0.6); color: #fff; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
